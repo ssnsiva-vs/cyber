@@ -54,8 +54,9 @@ Create a separate backend service for each frontend interface, instead of using 
 
 Consider an application that's initially designed with a desktop web UI and a corresponding backend service. As business requirements change over time, a mobile interface is added. Both interfaces interact with the same backend service. But the capabilities of a mobile device differ significantly from a desktop browser in terms of screen size, performance, and display limitations.
 
-[!\[Architectural diagram that shows the context and problem of the Backends for Frontends pattern.\](_images/backend-for-frontend-problem.svg)
- The diagram has two sections: the backend service and the desktop client and mobile client. Two double-sided arrows point from the backend service to both the desktop client and the mobile client.](_images/backend-for-frontend-problem.svg#lightbox)
+![Architectural diagram that shows the context and problem of the Backends for Frontends pattern.\](./_images/backend-for-frontend-problem.svg)
+
+The diagram has two sections: the backend service and the desktop client and mobile client. Two double-sided arrows point from the backend service to both the desktop client and the mobile client.](_images/backend-for-frontend-problem.svg#lightbox)
 
 A backend service frequently encounters competing demands from multiple frontend systems. These demands result in frequent updates and potential development bottlenecks. Conflicting updates and the need to maintain compatibility result in excessive demand on a single deployable resource.
 
@@ -71,7 +72,7 @@ Frontend teams independently manage their own BFF service, which gives them cont
 
 Many BFF services traditionally relied on REST APIs, but GraphQL implementations are emerging as an alternative. With GraphQL, the querying mechanism eliminates the need for a separate BFF layer because it allows clients to request the data that they need without relying on predefined endpoints.
 
-[!\[Architectural diagram that shows the Backends for Frontends pattern.\]((https://learn.microsoft.com/en-us/azure/architecture/patterns/_images/backend-for-frontend-example.svg))
+![Architectural diagram that shows the Backends for Frontends pattern.](./_images/backend-for-frontend-solution.svg)
 
 The diagram shows three sections. The first section consists of the desktop client and mobile client. The second section consists of the desktop client BFF service and the mobile client BFF service. The desktop client has a solid arrow that points to the desktop client BFF service. The mobile client has a solid arrow that points to the mobile client BFF service. Each BFF service has a dotted arrow that points to the backend service section.](_images/backend-for-frontend-solution.svg#lightbox)
 
