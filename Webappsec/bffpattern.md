@@ -71,8 +71,9 @@ Frontend teams independently manage their own BFF service, which gives them cont
 
 Many BFF services traditionally relied on REST APIs, but GraphQL implementations are emerging as an alternative. With GraphQL, the querying mechanism eliminates the need for a separate BFF layer because it allows clients to request the data that they need without relying on predefined endpoints.
 
-[!\[Architectural diagram that shows the Backends for Frontends pattern.\](_images/backend-for-frontend-solution.svg)
- The diagram shows three sections. The first section consists of the desktop client and mobile client. The second section consists of the desktop client BFF service and the mobile client BFF service. The desktop client has a solid arrow that points to the desktop client BFF service. The mobile client has a solid arrow that points to the mobile client BFF service. Each BFF service has a dotted arrow that points to the backend service section.](_images/backend-for-frontend-solution.svg#lightbox)
+[!\[Architectural diagram that shows the Backends for Frontends pattern.\]((https://learn.microsoft.com/en-us/azure/architecture/patterns/_images/backend-for-frontend-example.svg))
+
+The diagram shows three sections. The first section consists of the desktop client and mobile client. The second section consists of the desktop client BFF service and the mobile client BFF service. The desktop client has a solid arrow that points to the desktop client BFF service. The mobile client has a solid arrow that points to the mobile client BFF service. Each BFF service has a dotted arrow that points to the backend service section.](_images/backend-for-frontend-solution.svg#lightbox)
 
 For more information, see [Backends for Frontends pattern by Sam Newman](https://samnewman.io/patterns/architectural/bff/).
 
