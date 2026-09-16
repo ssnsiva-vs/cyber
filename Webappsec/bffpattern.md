@@ -127,7 +127,7 @@ This example demonstrates a use case for the pattern in which two distinct clien
 
 Each client has a dedicated BFF service running as an Azure function that serves as an intermediary between the gateway and the underlying microservices. These client-specific BFF services ensure a tailored experience for pagination and other functionalities. The mobile app prioritizes bandwidth efficiency and takes advantage of caching to enhance performance. In contrast, the desktop application retrieves multiple pages in a single request, which creates a more immersive user experience.
 
-[!\[Diagram that shows the Azure BFF service architecture with API Management handling cross-cutting concerns. Mobile and desktop platforms retrieve data through client-specific Azure Functions in the BFF service.\]("https://github.com/MicrosoftDocs/architecture-center/blob/main/docs/patterns/_images/backend-for-frontend-example.svg")
+![Diagram that shows the Azure BFF service architecture with API Management handling cross-cutting concerns. Mobile and desktop platforms retrieve data through client-specific Azure Functions in the BFF service]("https://github.com/MicrosoftDocs/architecture-center/blob/main/docs/patterns/_images/backend-for-frontend-example.svg")
 
 
 # The diagram is structured into four sections 
