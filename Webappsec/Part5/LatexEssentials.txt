@@ -1,0 +1,106 @@
+
+% slide
+\begin{frame}
+\frametitle{ }
+\end{frame}
+
+% New section
+\section{Introduction}
+
+% Itemize
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+
+\begin{description}[font=$\bullet$~\normalfont\scshape\color{red!50!black}]
+\item 
+\item 
+\item 
+\item 
+\end{description}
+
+% To change all itemize lists:
+\usepackage{enumitem}
+\setlist[itemize]{font=\small}
+
+% To change a specific list:
+\begin{itemize}[font=\Large]
+    \item Large item
+\end{itemize}
+
+
+% Define the graphics path (Note the trailing slash!)
+\usepackage{graphicx}
+\graphicspath{{pictures/}} 
+\begin{document}
+\begin{figure}[htbp]
+    \centering
+    % You do not need to repeat "pictures/" here
+    \includegraphics[width=0.5\textwidth]{example-image}
+    \caption{This is an image from the pictures folder.}
+    \label{fig:image1}
+\end{figure}
+
+\includegraphics[width=0.5\textwidth]{example-image}
+
+
+\begin{itemize}
+    \item[$\bullet$] Custom bullet (standard)
+    \item[$\cdot$] Centered dot
+    \item[$\ast$] Asterisk
+    \item[$-$] Dash
+    \item[$\rightarrow$] Arrow
+\textcolor{red}{$\bullet$} 
+\end{itemize}
+
+% 3 Columns
+
+{|p{3cm}|p{2cm}|p{4cm}|}
+
+\begin{frame}
+    \frametitle{Three Images in Three Columns}
+    
+    \begin{columns}[c] % [c] option for vertical center alignment
+        
+        \column{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{image1.png}
+        \captionof{figure}{Caption 1} % Use \captionof for captions outside a float env
+        
+        \column{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{image2.png}
+        \captionof{figure}{Caption 2}
+        
+        \column{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{image3.png}
+        \captionof{figure}{Caption 3}
+        
+    \end{columns}
+\end{frame}
+
+% Source - https://tex.stackexchange.com/a/726047
+% Posted by David Carlisle Errors with using \background package
+% Retrieved 2026-03-24, License - CC BY-SA 4.0
+
+\documentclass{article}
+\usepackage{graphicx}
+\AddToHook{shipout/background}{%
+  \put(100,-150){\includegraphics[width=3cm]{example-image-a}}%
+  \put(3in,-5in){\includegraphics[width=6cm]{example-image-b}}%
+  \put(8cm,-15cm){\hbox{\Huge\sffamily Some Background text}}%
+}
+
+\begin{document}
+
+\def\x{Some text some text \stepcounter{enumi}\roman{enumi} more text}
+\def\xx{\x\ \x\ \x \x. Filler text in the forground \x. \x. \x.
+  \x. \x. \x. \x. \x. \x.}
+
+\xx\par\xx\par\xx\par\xx\par\xx\par\xx\par\xx\par\xx\par
+\end{document}
+

@@ -1,0 +1,187 @@
+\documentclass[13pt, aspectratio=169]{beamer}
+\setbeamertemplate{navigation symbols}{}
+\usepackage{fontspec}
+\setsansfont{Calibri}
+\AtBeginSection[]{
+\begin{frame}
+	\vfill
+	\centering
+	\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+		\usebeamerfont{title}\insertsectionhead\par%
+	\end{beamercolorbox}
+	\vfill
+\end{frame}
+}
+% \usepackage{silence}
+% \WarningsOff[everypage]% Suppress warnings related to package everypage
+% \WarningsOff
+\usepackage{array}
+\usepackage{url}
+\usepackage{booktabs}
+% \usepackage[]{tabularx}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[]{tabularx, graphicx}
+\graphicspath{{pictures/}}
+% \usepackage{background}
+\usepackage{parskip}
+% \usepackage[absolute,overlay]{textpos}
+\usepackage{xcolor}
+% \usepackage{lipsum}
+\usepackage{wrapfig}
+\usepackage{tabularx,colortbl}
+\usepackage{hyperref}
+\usepackage{lipsum}
+
+\title{Web Application Security}
+\subtitle[]{Part 2}
+\author{Sivasubramanian Natarajan}
+\institute{Presented at SNU}
+\date{Updated 3 Feb 2026}
+\setbeamertemplate{footline}[frame number]
+
+\setbeamercolor{itemize item}{fg=red}
+\setbeamercolor{itemize subitem}{fg=red}
+\setbeamercolor{itemize subsubitem}{fg=blue}
+
+\setbeamertemplate{itemize item}[square]
+\setbeamertemplate{itemize subitem}[circle]
+\setbeamertemplate{itemize subsubitem}[circle]
+
+\setbeamertemplate{footline}[text line]{%
+\parbox{\linewidth}{\centering
+Web Application Security CS4013 \hfill
+\insertshortauthor \hfill
+\insertframenumber{} / \inserttotalframenumber} }
+% Source - https://tex.stackexchange.com/a/59131
+% Posted by mbork
+\setlength{\emergencystretch}{3pt}
+% Retrieved 2026-03-24, License - CC BY-SA 3.0
+
+\begin{document}
+\begin{frame}
+
+\includegraphics[width=.9\textwidth] {ssnlogo.png}
+
+\end{frame}
+
+% Section Page
+
+ \begin{frame}
+\frametitle{}
+\fontsize{14pt}{12pt}\selectfont
+\begin{columns}
+\begin{column}{0.3\textwidth}
+\begin{tabular}{l}
+Web Application Security\\
+\end{tabular}
+\end{column}
+\vrule
+\begin{column}{0.5\textwidth}
+\begin{tabular}{l}
+Part 7 \\
+\midrule
+Updated Aug 20, 2026 \\
+\midrule
+Presented at SNU Chennai \\
+\midrule
+Sivasubramanian Natarajan
+\end{tabular}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Recommended Text books}
+\begin{itemize}
+\item Web Application Security, Andrew Hoffman (O'Reilly)
+\item Grokking Web application security, Malcom Macdonald (Manning Books)
+\end{itemize}
+\end{frame}
+
+
+\section{Recap}
+
+\begin{frame}
+\frametitle{Previous class Summary}
+\begin{itemize}
+  \item XSS
+  \item CSRF
+  \item SQL Injection
+  \item Contemporary web applications (SPA, Reactjs etc., Nodejs)
+  \item High level approach to understanding web application security
+\end{itemize}
+\end{frame}
+
+\section{Approach to Web application security}
+
+\begin{frame}
+\frametitle{Introduction}
+Broad areas of Web application security 
+\begin{itemize}
+	\item Minimum security features
+	\item Software Development Lifecycle
+	\item Secure coding practices
+	\item Testing
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Minimum Security features}
+	
+	\begin{itemize}
+		\item User management (Authentication, Authorization, Access Control)
+		\item User Input management
+		\item Data Security
+		\item Attacks and Errors prevention
+		\item Application infrastructure security
+	\end{itemize}
+	
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Software Development Lifecycle}
+SDLC Perspective
+	\begin{itemize}
+		\item Design, Coding, Testing and release stages
+		\item The stages are sequential
+		\item Every coding project contains bugs, a percentage of which has the potential to get converted into a vulnerability
+		\item Bugs when caught early in the development stage is less painful to fix, compared with catching them during testing or in the release phase.
+	\end{itemize}
+	
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Secure coding practices}
+\url{https://cheatsheetseries.owasp.org/index.html}
+	\begin{itemize}
+		\item Authentication, Authorization, Session management
+		\item JWT, OAUTH2 and SAML
+		\item IDE plugins
+		\item Zero trust
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Testing for errors and vulnerabilities}
+	\url{https://owasp.org/www-project-web-security-testing-guide/stable/}
+	\begin{itemize}
+		\item SAST and DAST
+		\item Vulnerability penetration testing
+		\item Prioritization and fixes
+		\item Regression
+	\end{itemize}
+\end{frame}
+
+
+\end{document}
+
+

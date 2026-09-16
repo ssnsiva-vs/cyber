@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Recap}{4}{0}{1}
+\beamer@sectionintoc {2}{Definitions}{6}{0}{2}
+\beamer@sectionintoc {3}{Operationalizing Definitions}{9}{0}{3}
+\beamer@sectionintoc {4}{Implementating the envisaged operations in IAM}{15}{0}{4}
+\beamer@sectionintoc {5}{Literature}{17}{0}{5}
