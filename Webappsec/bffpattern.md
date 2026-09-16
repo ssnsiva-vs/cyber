@@ -54,9 +54,9 @@ Create a separate backend service for each frontend interface, instead of using 
 
 Consider an application that's initially designed with a desktop web UI and a corresponding backend service. As business requirements change over time, a mobile interface is added. Both interfaces interact with the same backend service. But the capabilities of a mobile device differ significantly from a desktop browser in terms of screen size, performance, and display limitations.
 
-![Architectural diagram that shows the context and problem of the Backends for Frontends pattern.\](./_images/backend-for-frontend-problem.svg)
+![Architectural diagram that shows the context and problem of the Backends for Frontends pattern](./_images/backend-for-frontend-problem.svg)
 
-The diagram has two sections: the backend service and the desktop client and mobile client. Two double-sided arrows point from the backend service to both the desktop client and the mobile client.](_images/backend-for-frontend-problem.svg#lightbox)
+The diagram has two sections: the backend service and the desktop client and mobile client. Two double-sided arrows point from the backend service to both the desktop client and the mobile client.
 
 A backend service frequently encounters competing demands from multiple frontend systems. These demands result in frequent updates and potential development bottlenecks. Conflicting updates and the need to maintain compatibility result in excessive demand on a single deployable resource.
 
