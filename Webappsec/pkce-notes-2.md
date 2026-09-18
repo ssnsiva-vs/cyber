@@ -16,8 +16,6 @@
 
 ![AuthZ code interception attack](./_images/pkce-1.avif)
 
-<img alt="authorization code interception attack" class="mx-auto d-block" src="https://mintcdn.com/authlete/EJDZNZMvOu_9CJHJ/configuration-reference/endpoints/authorization_code_interception_attack.png?fit=max&auto=format&n=EJDZNZMvOu_9CJHJ&q=85&s=7d65ff051ff2e6a0b8a32681a778dd93" width="691" height="435" data-path="configuration-reference/endpoints/authorization_code_interception_attack.png" />
-
 The specification was released on September, 2015. It has added:
 
 1. `code_challenge` parameter and `code_challenge_method` parameter to authorization requests using the authorization code flow, and
@@ -63,6 +61,8 @@ After generating an authorization code, an authorization server saves it into it
 The authorization server will use the saved code challenge and the code challenge method later to verify a token request from the client application.
 
 A response from the authorization endpoint has nothing special for PKCE. It's a normal response as usual.
+
+![AuthZ code interception attack](./_images/pkce-2.png)
 
 <img alt="pkce authorization response" class="mx-auto d-block" src="https://mintcdn.com/authlete/EJDZNZMvOu_9CJHJ/configuration-reference/endpoints/pkce_authorization_response.png?fit=max&auto=format&n=EJDZNZMvOu_9CJHJ&q=85&s=5602266550adfb6fec44be2a271a153d" width="461" height="621" data-path="configuration-reference/endpoints/pkce_authorization_response.png" />
 
