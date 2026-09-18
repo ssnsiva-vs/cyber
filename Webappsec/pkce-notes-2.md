@@ -14,6 +14,8 @@
 
 [RFC 7636](http://tools.ietf.org/html/rfc7636) : **Proof Key for Code Exchange** (PKCE, pronounced "pixy") is a specification about a countermeasure against the **authorization code interception attack**.
 
+![AuthZ code interception attack](./_images/pkce-1.avif)
+
 <img alt="authorization code interception attack" class="mx-auto d-block" src="https://mintcdn.com/authlete/EJDZNZMvOu_9CJHJ/configuration-reference/endpoints/authorization_code_interception_attack.png?fit=max&auto=format&n=EJDZNZMvOu_9CJHJ&q=85&s=7d65ff051ff2e6a0b8a32681a778dd93" width="691" height="435" data-path="configuration-reference/endpoints/authorization_code_interception_attack.png" />
 
 The specification was released on September, 2015. It has added:
