@@ -36,6 +36,8 @@ The value of code\_challenge parameter is computed by applying a code challenge 
 ### 2.3 Code Verifier Value
 
 A code verifier itself is a random string using characters of `[A-Z] / [a-z] / [0-9] / "-" / "." / "_" / "~"`, with a minimum length of 43 characters and a maximum length of 128 characters.
+
+
 ![AuthZ code interception attack](./_images/pkce-2.png)
 
 
