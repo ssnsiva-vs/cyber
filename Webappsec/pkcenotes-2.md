@@ -2,6 +2,10 @@
 > Fetch the complete documentation index at: https://developers.authlete.com/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+Reference https://developers.authlete.com/protocols-and-flows/basic-oauth-oidc-flows/oauth-2-0-and-openid-connect-authorization-endpoints
+
+
+
 # Proof Key for Code Exchange (RFC 7636)
 
 > This document describes PKCE, a countermeasure agains the authorization code interception attack, defined in RFC 7636.
