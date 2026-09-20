@@ -72,3 +72,4 @@ To help narrow down the deployment setup, let me know:
 
 The menu will be generated as html. A sample report can be accessed below
 
+https://github.com/ssnsiva-vs/cyber/blob/main/EHPTSE/2026-09-20-ZAP-Report-.html 
