@@ -62,11 +62,11 @@ To help narrow down the deployment setup, let me know:
 
 8. Click on Automated Scan
 
-![alt text](image-1.png)
+![alt text](./images/image-1.png)
 
 9. Fill in the IP address of the machine in which Juice shop is running and Click on Attack
 
-![alt text](image-2.png)
+![alt text](./images/image-2.png)
 
 10. Wait for the scan to complete and then click on Generate report from the top menu.
 
