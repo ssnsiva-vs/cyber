@@ -47,9 +47,9 @@ Even though the cookie value cannot be read directly, a stored XSS payload still
 * Privilege Escalation / Actions: The malicious script can perform unauthorized actions within the application as the victim, such as changing the user's password, creating new admin accounts, or exfiltrating other non-protected data visible in the DOM. 
 * Server-Side Leakage Endpoints: If the application has an endpoint that echoes the session token or sensitive profile information back in an API response or page content via an authenticated request, the script can read that response and send it to an attacker-controlled server. [3]  
 
-[1] https://thecyberneh.medium.com/the-illusion-of-safety-exploiting-xss-beyond-httponly-cookies-b81c6493bb76
-[2] https://clerk.com/docs/guides/secure/best-practices/xss-leak-protection
-[3] https://www.praetorian.com/blog/httponly-cookie-bypass-xss-ghostscript-rce/
+- [1] https://thecyberneh.medium.com/the-illusion-of-safety-exploiting-xss-beyond-httponly-cookies-b81c6493bb76
+- [2] https://clerk.com/docs/guides/secure/best-practices/xss-leak-protection
+- [3] https://www.praetorian.com/blog/httponly-cookie-bypass-xss-ghostscript-rce/
 
 
 # httponly flag
