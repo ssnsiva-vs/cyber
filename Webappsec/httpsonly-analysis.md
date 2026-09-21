@@ -1,4 +1,4 @@
-![Cookie Theft] (./_images/httponly-analysis.drawio.png)
+![Cookie Theft](./_images/httponly-analysis.drawio.png)
 
 # Weakest link in a Backend for Frontend (BFF) architecture
 
