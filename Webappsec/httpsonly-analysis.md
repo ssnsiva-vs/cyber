@@ -22,7 +22,7 @@ To counteract the inherent weaknesses of cookie-based BFF communication, develop
 | Strict Content Security Policy (CSP) | Restricts where the browser can load scripts from, utilizing nonces to stop unauthorized script execution entirely. | XSS & Proxy Abuse  |
 | Token Binding / Context Checks | The BFF validates incoming requests against behavioral markers (e.g., matching client IP shifts, JA3 fingerprints, or device identifiers). | Session Exfiltration  |
 
-# Why  Protects Against Direct Theft 
+# How it Protects Against Direct Theft 
 
 • Blocked Access: The  flag instructs the browser that the cookie is restricted to server-side communications. 
 • Invisible to Scripts: Client-side JavaScript running in the browser cannot access or return an  cookie via . 
