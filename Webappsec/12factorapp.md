@@ -1,3 +1,5 @@
+https://blog.rheinwerk-computing.com/twelve-factor-app-principles-for-developers 
+
 # Twelve-Factor App Principles for Developers Rheinwerk Computing 
 
 As web applications became popular in the past two decades, many best practices and principles have emerged to develop and maintain web applications, including the twelve-factor app set of principles for building performant, scalable, and resilient web applications.
