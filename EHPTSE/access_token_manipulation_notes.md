@@ -91,8 +91,7 @@ Direct Impact Summary
 | OS Token Impersonation | Active  or Admin process handles. | Local Privilege Escalation & UAC Bypass. | Run users as standard accounts; monitor API chains like .  |
 | Application Token Theft | Web browser cookies, app caches, or cloud session profiles. | Bypassing passwords/MFA to access cloud resources. | Enable Microsoft Entra Token Protection (Device Binding) and LSA Guard.  |
 
-Are you analyzing this to diagnose a security alert in your environment, or are you developing detection rules (such as Sigma or YARA rules) to catch token manipulation attempts? Let me know your specific goal so I can provide the right technical architecture or script examples. 
-AI responses may include mistakes.
+
 
 - [1] https://www.obsidiansecurity.com/blog/token-based-attacks-how-attackers-bypass-mfa
 - [2] https://www.mcafee.com/blogs/other-blogs/mcafee-labs/access-token-theft-and-manipulation-attacks-a-door-to-local-privilege-escalation/
