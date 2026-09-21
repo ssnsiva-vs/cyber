@@ -31,12 +31,12 @@ To counteract the inherent weaknesses of cookie-based BFF communication, develop
 
 # Links
 
-[1] https://github.com/openiddict/openiddict-samples/issues/180
-[2] https://stevekinney.com/courses/enterprise-ui/authentication-and-authorization
-[3] https://moonsat.medium.com/the-backend-for-frontend-bff-pattern-secure-auth-done-right-4afdb2847c5d
-[4] https://capturethebug.xyz/blogs/Modern-Frontend-Security-Protecting-Your-Application-Beyond-XSS-and-CSRF-in-2025
-[5] https://docs.duendesoftware.com/bff/architecture/
-[6] https://nhimg.org/glossary/httponly-cookie/
+- [1] https://github.com/openiddict/openiddict-samples/issues/180
+- [2] https://stevekinney.com/courses/enterprise-ui/authentication-and-authorization
+- [3] https://moonsat.medium.com/the-backend-for-frontend-bff-pattern-secure-auth-done-right-4afdb2847c5d
+- [4] https://capturethebug.xyz/blogs/Modern-Frontend-Security-Protecting-Your-Application-Beyond-XSS-and-CSRF-in-2025
+- [5] https://docs.duendesoftware.com/bff/architecture/
+- [6] https://nhimg.org/glossary/httponly-cookie/
 
 
 # How Attackers Still Exploit Stored XSS with  Cookies 
@@ -67,10 +67,10 @@ Why JavaScript is Blocked
 # Note:
 HttpOnly will still be sent with JavaScript-initiated requests, for example, when calling XMLHttpRequest.send() or fetch(). This mitigates attacks against cross-site scripting (XSS).
 
-[1] https://stackshield.io/blog/laravel-session-security-configuration
-[2] https://nzaisecurity.com/resource-library/secure-cookie-flags/
-[3] https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies
-[4] https://www.echoapi.com/blog/xss-attacks-how-hackers-turn-your-website-into-an-apocalypse-how-to-defend-against-it/
+- [1] https://stackshield.io/blog/laravel-session-security-configuration
+- [2] https://nzaisecurity.com/resource-library/secure-cookie-flags/
+- [3] https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies
+- [4] https://www.echoapi.com/blog/xss-attacks-how-hackers-turn-your-website-into-an-apocalypse-how-to-defend-against-it/
 
 
 
