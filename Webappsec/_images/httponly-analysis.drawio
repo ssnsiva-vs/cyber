@@ -1,0 +1,76 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="H6sBm4WG2MsNezw0fGko">
+    <mxGraphModel dx="1140" dy="769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-1" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;Browser&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;" vertex="1">
+          <mxGeometry height="180" width="180" x="80" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="httponly COOKIE SET BY SITE A" vertex="1">
+          <mxGeometry height="30" width="120" x="110" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-3" parent="1" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.android;fillColor=#205E00;gradientColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;JS&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="50" x="100" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-4" parent="1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/web_server.svg;" value="APPLICATION SERVER SITE A" vertex="1">
+          <mxGeometry height="180" width="144" x="650" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-8" parent="1" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.rectCallout;dx=22;dy=24;boundedLbl=1;align=left;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Javascript CANNOT ACCESS SITE COOKIE set httponly and&amp;nbsp; CSP and SOP.&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Method used to read cookie is document.cookie()&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="275" x="145" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-11" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="145.62484374441942" y="260" as="sourcePoint" />
+            <mxPoint x="132.5" y="230.00142857142856" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-12" edge="1" parent="1" source="pZvCznxpsD7gZLRp7ueT-2" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="163" y="300" as="sourcePoint" />
+            <mxPoint x="154.44444444444434" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-13" parent="1" style="shape=mxgraph.mockup.markup.redX;fillColor=#ff0000;html=1;shadow=0;whiteSpace=wrap;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="20" width="50" x="130" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-14" parent="1" style="verticalLabelPosition=bottom;sketch=0;html=1;fillColor=#F06650;strokeColor=#ffffff;verticalAlign=top;align=center;points=[];pointerEvents=1;shape=mxgraph.cisco_safe.compositeIcon;bgIcon=threat1;resIcon=mxgraph.cisco_safe.threat.threat_a1;" value="THREAT" vertex="1">
+          <mxGeometry height="30" width="30" x="90" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-15" parent="1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.textBox;fontColor=#666666;align=left;fontSize=17;spacingLeft=4;spacingTop=-3;whiteSpace=wrap;strokeColor=#666666;mainText=" value="Stored XSS*" vertex="1">
+          <mxGeometry height="30" width="220" x="130" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-16" parent="1" style="verticalLabelPosition=bottom;sketch=0;html=1;fillColor=#F06650;strokeColor=#ffffff;verticalAlign=top;align=center;points=[];pointerEvents=1;shape=mxgraph.cisco_safe.compositeIcon;bgIcon=threat1;resIcon=mxgraph.cisco_safe.threat.threat_a1;" value="THREAT" vertex="1">
+          <mxGeometry height="30" width="30" x="90" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-17" parent="1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.textBox;fontColor=#666666;align=left;fontSize=17;spacingLeft=4;spacingTop=-3;whiteSpace=wrap;strokeColor=#666666;mainText=" value="CSRF" vertex="1">
+          <mxGeometry height="30" width="220" x="130" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-18" edge="1" parent="1" source="pZvCznxpsD7gZLRp7ueT-1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.994;exitY=0.544;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="450" y="257.92" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-19" parent="1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/database_server.svg;" value="BFF SERVER" vertex="1">
+          <mxGeometry height="170" width="139.4" x="450" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-20" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="pZvCznxpsD7gZLRp7ueT-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="539.4" y="250" as="sourcePoint" />
+            <mxPoint x="589.4" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-21" parent="1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/database_server.svg;" value="AUTHZ SERVER" vertex="1">
+          <mxGeometry height="170" width="139.4" x="440" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="pZvCznxpsD7gZLRp7ueT-22" edge="1" parent="1" source="pZvCznxpsD7gZLRp7ueT-21" style="endArrow=classic;startArrow=classic;html=1;fontColor=#FF3333;rounded=0;exitX=0.242;exitY=0.009;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="469.9978743391027" y="400.0034556746777" as="sourcePoint" />
+            <mxPoint x="473.5140380062016" y="319.8190498449566" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
