@@ -25,9 +25,9 @@ To counteract the inherent weaknesses of cookie-based BFF communication, develop
 
 # How it Protects Against Direct Theft 
 
-• Blocked Access: The  flag instructs the browser that the cookie is restricted to server-side communications. 
-• Invisible to Scripts: Client-side JavaScript running in the browser cannot access or return an  cookie via . 
-• Stored vs. Reflected: Whether the XSS is stored, reflected, or DOM-based does not change this browser-level restriction on JavaScript execution. 
+* Blocked Access: The  flag instructs the browser that the cookie is restricted to server-side communications. 
+* Invisible to Scripts: Client-side JavaScript running in the browser cannot access or return an  cookie via . 
+* Stored vs. Reflected: Whether the XSS is stored, reflected, or DOM-based does not change this browser-level restriction on JavaScript execution. 
 
 # Links
 
@@ -43,9 +43,9 @@ To counteract the inherent weaknesses of cookie-based BFF communication, develop
 
 Even though the cookie value cannot be read directly, a stored XSS payload still executes inside the victim's authenticated session. An attacker can bypass the need to "steal" the cookie by making the browser perform actions on the user's behalf: 
 
-• Making Authenticated Requests: The browser automatically attaches  cookies to any background network requests (like  or ) or form submissions sent to the server. 
-• Privilege Escalation / Actions: The malicious script can perform unauthorized actions within the application as the victim, such as changing the user's password, creating new admin accounts, or exfiltrating other non-protected data visible in the DOM. 
-• Server-Side Leakage Endpoints: If the application has an endpoint that echoes the session token or sensitive profile information back in an API response or page content via an authenticated request, the script can read that response and send it to an attacker-controlled server. [3]  
+* Making Authenticated Requests: The browser automatically attaches  cookies to any background network requests (like  or ) or form submissions sent to the server. 
+* Privilege Escalation / Actions: The malicious script can perform unauthorized actions within the application as the victim, such as changing the user's password, creating new admin accounts, or exfiltrating other non-protected data visible in the DOM. 
+* Server-Side Leakage Endpoints: If the application has an endpoint that echoes the session token or sensitive profile information back in an API response or page content via an authenticated request, the script can read that response and send it to an attacker-controlled server. [3]  
 
 [1] https://thecyberneh.medium.com/the-illusion-of-safety-exploiting-xss-beyond-httponly-cookies-b81c6493bb76
 [2] https://clerk.com/docs/guides/secure/best-practices/xss-leak-protection
@@ -57,12 +57,12 @@ Even though the cookie value cannot be read directly, a stored XSS payload still
 JavaScript cannot access an cookie because the browser's native engine blocks client-side script access to it entirely via , independently of Content Security Policy (CSP) or the Same-Origin Policy (SOP). [1, 2]  
 Why JavaScript is Blocked 
 
-• HttpOnly Flag: This attribute explicitly instructs the browser to restrict cookie exposure strictly to underlying HTTP network requests. Client-side APIs like  return an empty or filtered string missing that cookie. 
-• Role of CSP & SOP: 
+* HttpOnly Flag: This attribute explicitly instructs the browser to restrict cookie exposure strictly to underlying HTTP network requests. Client-side APIs like  return an empty or filtered string missing that cookie. 
+* Role of CSP & SOP: 
 
-	• SOP controls how different websites or origins interact with data and resources. 
-	• CSP restricts where scripts can load from and execute, mitigating Cross-Site Scripting (XSS). 
-	• Neither SOP nor CSP defines cookie visibility; rather, the  flag is the direct mechanism that stops JavaScript from reading sensitive session values. [2, 4]  
+    - SOP controls how different websites or origins interact with data and resources. 
+	- CSP restricts where scripts can load from and execute, mitigating Cross-Site Scripting (XSS). 
+	- Neither SOP nor CSP defines cookie visibility; rather, the  flag is the direct mechanism that stops JavaScript from reading sensitive session values. [2, 4]  
 
 # Note:
 HttpOnly will still be sent with JavaScript-initiated requests, for example, when calling XMLHttpRequest.send() or fetch(). This mitigates attacks against cross-site scripting (XSS).
