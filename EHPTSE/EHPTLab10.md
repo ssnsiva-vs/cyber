@@ -1,3 +1,10 @@
+# LAB 10
+
+# Background and introduction
+
+## Vulnerability scanning of other enterprise Assets 
+
+
 To thoroughly scan networks, operating systems, web apps, and databases, you need a multi-tool approach because no single open-source tool excels at all four layers.
 ## Recommended Open-Source Scanner Matrix
 
@@ -38,7 +45,9 @@ To help narrow down the deployment setup, let me know:
 * What operating system will you be hosting these scanners on? (e.g., Kali Linux, Ubuntu, Windows)
 * Are you looking to automate these scans in a pipeline (like GitHub Actions or GitLab CI/CD) or run them as one-off manual assessments?
 
-# How to setup
+# LAB Setup
+
+## How to setup
 
 1. Download ZAP proxy from the URL https://www.zaproxy.org/download/ (OR) Alternatively you can install on kali-linux using the below command.
 > sudo apt install zaproxy' on kali-linux.
