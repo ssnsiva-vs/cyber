@@ -83,3 +83,4 @@ These tools **surface misconfigurations**; understanding *why* something is expl
 - OWASP Testing Guide
 - OSCP / PEN-200 course material (official, hands-on labs)
 - GTFOBins.github.io and LOLBAS-project.github.io (reference only, use ethically)
+- https://www.akamai.com/cloud/guides/windows-red-team-privilege-escalation-techniques 
