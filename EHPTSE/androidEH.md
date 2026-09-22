@@ -141,7 +141,10 @@ adb shell netstat -an
 
 Would you like to see how to extract and read the AndroidManifest.xml file to audit these permissions, or should we look at how to inspect the local database directories (/data/data/) for sensitive information leaks?
 
-Performing reconnaissance on an Android device over Wi-Fi allows you to gather information without a physical USB connection. This technique is typically used during network-based internal penetration tests to identify vulnerable mobile devices or when operating a remote testing lab.
+# Performing reconnaissance on an Android device over Wi-Fi 
+
+This technique allows you to gather information without a physical USB connection. This technique is typically used during network-based internal penetration tests to identify vulnerable mobile devices or when operating a remote testing lab.
+
 ## 1. Network Discovery (Locating the Device)
 Before you can interact with the device, you must identify its IP address on the local wireless network.
 
@@ -191,7 +194,76 @@ adb shell netstat -tulpn
 adb shell dumpsys wifi | grep -E "mWifiInfo|SSID"
 
 
-Would you like to explore how to secure a device against unauthorized wireless ADB connections, or should we look at how to intercept HTTPS web traffic over Wi-Fi using Burp Suite?
+# How to intercept HTTPS web traffic over Wi-Fi using Burp Suite?
+
+- To intercept HTTPS web traffic from an Android device over Wi-Fi using Burp Suite, you must route the device's traffic through your host computer and establish trust for Burp's Certificate Authority (CA).
+- Modern Android versions (Android 7.0 and higher) strictly enforce network security, meaning applications will ignore user-installed certificates by default. To successfully intercept traffic, follow this step-by-step methodology.
+------------------------------
+## Step 1: Configure the Burp Suite Listener
+Your host machine must be configured to accept external network traffic from the Android device.
+
+   1. Open Burp Suite and navigate to Proxy > Proxy Settings > Listeners.
+   2. Click Add to create a new listener.
+   3. Set the Bind to port to a custom port (e.g., 8082).
+   4. Set Bind to address to All interfaces or select your host machine's specific local IP address (e.g., 192.168.1.10). Click OK.
+
+------------------------------
+## Step 2: Configure the Android Wi-Fi Proxy
+Route the Android device's network traffic to your Burp Suite listener.
+
+   1. On your Android device, go to Settings > Network & Internet > Internet / Wi-Fi.
+   2. Tap the Gear Icon next to the connected Wi-Fi network and select Edit/Modify network.
+   3. Expand Advanced Options and change the Proxy dropdown from None to Manual.
+   4. Enter the Proxy hostname (your host machine's IP address) and Proxy port (e.g., 8082).
+   5. Save the configuration.
+
+------------------------------
+## Step 3: Format and Install the Burp CA Certificate
+Because standard user certificates are ignored by modern apps, the certificate must be converted to a system-trusted cryptographic hash and injected into the Android root store (requires a rooted device or emulator).
+## 1. Download the Certificate
+Open a browser on your host machine, navigate to http://burpsuite, and download the CA Certificate (usually named cacert.der).
+## 2. Convert DER to PEM format
+Android requires the certificate to be in PEM format named after its specific subject hash. Open a terminal on your host machine and run:
+
+# Convert DER to PEM format
+openssl x509 -inform DER -in cacert.der -out cacert.pem
+# Calculate the subject name hash
+openssl x509 -inform PEM -subject_hash_old -in cacert.pem | head -1
+
+This command will output a 8-character hex string (for example: 9a5da575).
+## 3. Rename the Certificate
+Rename your cacert.pem file to match the output hash followed by .0:
+
+mv cacert.pem 9a5da575.0
+
+## 4. Push and Move to Android System Store
+Use ADB to transfer the file and write it directly into the system certificate folder:
+
+# Gain root access and make the system partition writable
+adb root
+adb remount
+# Push the certificate to the device's temporary folder
+adb push 9a5da575.0 /data/local/tmp/
+# Move the certificate to the system trusted CA store
+adb shell "mv /data/local/tmp/9a5da575.0 /system/etc/security/cacerts/"
+# Fix permissions so the OS can read the file
+adb shell "chmod 644 /system/etc/security/cacerts/9a5da575.0"
+# Reboot the device to apply changes
+adb reboot
+
+------------------------------
+## Step 4: Intercept and Validate
+
+   1. Once the device reboots, go to Settings > Security > More Security Settings > Encryption & Credentials > Trusted Credentials.
+   2. Look under the System tab to confirm PortSwigger CA is successfully listed.
+   3. Turn Intercept is ON in Burp Suite's Proxy tab.
+   4. Open the target Android app or a mobile browser. You will see HTTPS requests populating your Burp HTTP history log.
+
+If the app still refuses to connect or shows connection errors despite this setup, it is likely utilizing SSL Pinning. Let me know if you would like to explore:
+
+* Using Frida scripts to dynamically bypass SSL Pinning at runtime
+* Configuring network security exceptions in the app's source code by decompiling and rebuilding the APK
+
 
 
 
