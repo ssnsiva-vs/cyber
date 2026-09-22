@@ -141,5 +141,57 @@ adb shell netstat -an
 
 Would you like to see how to extract and read the AndroidManifest.xml file to audit these permissions, or should we look at how to inspect the local database directories (/data/data/) for sensitive information leaks?
 
+Performing reconnaissance on an Android device over Wi-Fi allows you to gather information without a physical USB connection. This technique is typically used during network-based internal penetration tests to identify vulnerable mobile devices or when operating a remote testing lab.
+## 1. Network Discovery (Locating the Device)
+Before you can interact with the device, you must identify its IP address on the local wireless network.
+
+* Scan the Local Network: Use Nmap to scan your subnet for active hosts and look for open ports common to Android systems.
+
+nmap -sV -p 5555,8080,9000 192.168.1.0/24
+
+* Identify Port 5555 (ADB over Wi-Fi): If port 5555 is open, the device has wireless debugging enabled and is exposed to the entire network without authentication on older Android versions.
+
+------------------------------
+## 2. Establishing the Remote ADB Connection
+Once you have the target IP address, connect your host machine's ADB client directly to the device over the network.
+
+* Connect to the Device:
+
+adb connect 192.168.1.50:5555
+
+* Verify the Connection: Ensure the state shows as device.
+
+adb devices
+
+Note: If the state shows unauthorized, you must tap the authorization prompt on the physical screen of the device to trust the host computer.
+
+------------------------------
+## 3. Remote Network Reconnaissance (Packet Sniffing)
+Once connected via wireless ADB, analyze the device's live network behavior to see what servers and endpoints it communicates with.
+
+* List Network Interfaces: Determine which Wi-Fi interfaces are active (usually wlan0).
+
+adb shell netcfg
+
+* Live Traffic Capture via tcpdump: If the device or emulator is rooted, use tcpdump to capture raw network traffic directly from the wireless interface and stream it to your host machine's Wireshark for real-time analysis.
+
+adb shell "tcpdump -i wlan0 -U -w -" | wireshark -k -i -
+
+
+------------------------------
+## 4. Remote Operating System and App Reconnaissance
+With the wireless ADB session active, all standard reconnaissance commands can be executed exactly like a USB connection.
+
+* Audit Open Network Sockets: View which local applications are listening on network ports over Wi-Fi.
+
+adb shell netstat -tulpn
+
+* Check Wi-Fi Connection Details: Extract detailed information about the wireless network the device is currently tied to (SSID, signal strength, link speed).
+
+adb shell dumpsys wifi | grep -E "mWifiInfo|SSID"
+
+
+Would you like to explore how to secure a device against unauthorized wireless ADB connections, or should we look at how to intercept HTTPS web traffic over Wi-Fi using Burp Suite?
+
 
 
