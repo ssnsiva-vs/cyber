@@ -41,7 +41,10 @@ To dive deeper focus on:
 
 # Setting up an Android penetration testing lab 
 
-This requires configuring an environment where you can safely decompile apps, intercept traffic, and analyze runtime behavior. You can build this using either a physical device or a virtual emulator.
+
+- This requires configuring an environment where you can safely decompile apps, intercept traffic, and analyze runtime behavior.
+- You can build this using either a physical device or a virtual emulator.
+  
 ------------------------------
 ## Step 1: Choose Your Device Environment
 
