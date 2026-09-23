@@ -20,16 +20,16 @@ Even though the Dalvik engine is defunct, Android still relies on the Dalvik Exe
    3. The dex2oat Tool: When a device installs or updates an app, an on-device utility called [dex2oat](https://source.android.com/docs/core/runtime) pulls the Dalvik-formatted bytecode (.dex) and compiles it directly into an ELF native executable (.oat file) tailored precisely to your device's processor. [7] 
 
 If you run adb shell getprop java.vm.version on any modern device, it returns 2.1.0 (or higher) instead of a 1.x.x version, confirming that ART is executing the app, even though the internal engine is processing legacy .dex structures. [3, 8] 
-Are you asking to understand how to reverse engineer .dex files (using tools like jadx or baksmali), or are you debugging a runtime error or performance issue related to how an app compiles on a device? Let me know so I can provide the right technical steps.
 
-[1] [https://www.geeksforgeeks.org](https://www.geeksforgeeks.org/android/difference-between-dalvik-and-art-in-android/)
-[2] [https://android.stackexchange.com](https://android.stackexchange.com/questions/233119/which-virtual-machine-is-used-in-android-11)
-[3] [https://source.android.com](https://source.android.com/docs/core/runtime)
-[4] [https://levelup.gitconnected.com](https://levelup.gitconnected.com/android-dvm-vs-art-5687c7903e65)
-[5] [https://medium.com](https://medium.com/p/f7791db70cf7)
-[6] [https://medium.com](https://medium.com/@professionalprovishal/art-vs-dalvik-the-jvm-story-nobody-told-you-and-why-android-had-to-build-its-own-runtime-from-944eff2e6b02)
-[7] [https://source.android.com](https://source.android.com/docs/core/runtime)
-[8] [https://stackoverflow.com](https://stackoverflow.com/questions/19830342/how-can-i-detect-the-android-runtime-dalvik-or-art)
+
+- [1] [https://www.geeksforgeeks.org](https://www.geeksforgeeks.org/android/difference-between-dalvik-and-art-in-android/)
+- [2] [https://android.stackexchange.com](https://android.stackexchange.com/questions/233119/which-virtual-machine-is-used-in-android-11)
+- [3] [https://source.android.com](https://source.android.com/docs/core/runtime)
+- [4] [https://levelup.gitconnected.com](https://levelup.gitconnected.com/android-dvm-vs-art-5687c7903e65)
+- [5] [https://medium.com](https://medium.com/p/f7791db70cf7)
+- [6] [https://medium.com](https://medium.com/@professionalprovishal/art-vs-dalvik-the-jvm-story-nobody-told-you-and-why-android-had-to-build-its-own-runtime-from-944eff2e6b02)
+- [7] [https://source.android.com](https://source.android.com/docs/core/runtime)
+- [8] [https://stackoverflow.com](https://stackoverflow.com/questions/19830342/how-can-i-detect-the-android-runtime-dalvik-or-art)
 
 
 
@@ -335,7 +335,7 @@ adb -s <device_id> shell getprop [4, 5, 6]
 * Search the Output: On Linux/macOS, combine the command with grep to quickly find specific strings:
 adb shell getprop | grep -i brand
 
-Are you looking for a specific hardware or software metric on your device, or are you trying to modify a property value using setprop? Let me know what you want to achieve so I can give you the exact command chain.
+
 
 - [1] [https://stackoverflow.com](https://stackoverflow.com/questions/40624222/how-does-adb-shell-getprop-and-setprop-work)
 - [2] [https://www.scribd.com](https://www.scribd.com/document/504245762/Zes)
@@ -535,11 +535,6 @@ Would you like to walk through setting up an environment with one of these frame
 * Network Traffic: Tests if data sent to servers uses secure connections and certificate pinning. [6, 7] 
 * Authentication: Verifies strong passwords, multi-factor authentication, and session handling. [4] 
 * Platform Security: Looks for proper setup of device permissions and checks if the app runs safely on rooted or jailbroken devices. [1, 7] 
-
-If you want to move forward, tell me:
-
-* Are you testing an Android or iOS application?
-* Do you need recommendations for automated tools or manual testing guides?
 
 
 - [1] [https://apiiro.com](https://apiiro.com/glossary/mobile-application-security-testing/)
