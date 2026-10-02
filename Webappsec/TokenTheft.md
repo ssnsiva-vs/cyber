@@ -1,4 +1,4 @@
-![Role of AI in Security - Use cases](../images/Screenshot_20261002-085042.png)
+![Role of AI in Security - Use cases](../../images/Screenshot_20261002-085042.png)
 
 Token theft is the act of stealing authentication tokens to gain unauthorized access without possessing passwords or completing MFA challenges. Unlike traditional credential attacks, token theft exploits the fundamental design of modern authentication: once a user successfully authenticates and receives a token, that token grants access until expiration or revocation. Attackers steal these tokens through phishing kits, browser compromise, malware, or supply chain breaches, then replay them to access SaaS applications, APIs, and cloud resources without triggering authentication controls. The attack bypasses MFA entirely because the token represents proof of already completed authentication.
 
