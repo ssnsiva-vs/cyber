@@ -1,4 +1,4 @@
-<<<<<<< HEAD:EHPTSE/EHPT Lab 11.md
+<<<<<<< HEAD:EHPTSE/EHPT Lab 11.md 
 # EHPT Lab 11
 
 ## Lab 11: Module 1 - UAC via Registry manipulation
