@@ -1,6 +1,6 @@
 
-To do packet sniffing on Wi-Fi, you must capture raw data directly out of the air. Unlike wired networks, wireless traffic requires your network adapter to be placed in Monitor Mode (rather than Promiscuous Mode) so it can listen to all over-the-air packets on a specific radio channel, regardless of which device they are sent to. [1] 
-Here is how to set up and perform Wi-Fi packet sniffing across different operating systems using [Wireshark](https://www.wireshark.org/download.html), the industry-standard network protocol analyzer. [2, 3] 
+- To do packet sniffing on Wi-Fi, you must capture raw data directly out of the air. Unlike wired networks, wireless traffic requires your network adapter to be placed in Monitor Mode (rather than Promiscuous Mode) so it can listen to all over-the-air packets on a specific radio channel, regardless of which device they are sent to. [1] 
+- Here is how to set up and perform Wi-Fi packet sniffing across different operating systems using [Wireshark](https://www.wireshark.org/download.html), the industry-standard network protocol analyzer. [2, 3]
 ------------------------------
 ## Step 1: Identify Your Wi-Fi Channel
 A wireless sniffer can generally only listen to one frequency channel at a time. You must find the channel your target devices are using: [1, 4] 
