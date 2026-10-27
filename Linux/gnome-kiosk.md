@@ -1,6 +1,6 @@
 # Configure a Fedora Server to boot directly into Google Chrome in Wayland kiosk mode, 
-
-Use the GNOME Kiosk single-application session or a lightweight Wayland compositor like Weston or Sway. The cleanest native approach on Fedora is leveraging GNOME Kiosk Script Wayland, which runs a single-purpose full-screen window environment without a full desktop shell. [1, 2, 3] 
+**
+Use the GNOME Kiosk single-application session or a lightweight Wayland compositor like Weston or Sway. The cleanest native approach on Fedora is leveraging GNOME Kiosk Script Wayland, which runs a single-purpose full-screen window environment without a full desktop shell. [1, 2, 3]**
 ------------------------------
 ## Step 1: Install Google Chrome and GNOME Kiosk
 
